@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetParadise - A Loja de Pet Mais Completa do Mundo</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">PetParadise</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Sobre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contato</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#cartModal">
+                            <i class="fas fa-shopping-cart cart-icon">
+                                <span class="cart-count">0</span>
+                            </i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Bem-vindo ao PetParadise</h1>
+            <p>A loja de pet mais completa do mundo!</p>
+            <a href="#products" class="btn btn-lg btn-primary">Compre Agora</a>
+        </div>
+    </section>
+
+    <section id="featured" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Produtos em Destaque</h2>
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="10.png" alt="" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="casa.png" alt="Descrição da Imagem 2" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://petparadise.com/images/product3.jpg" alt="Descrição da Imagem 3" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://petparadise.com/images/product4.jpg" alt="Descrição da Imagem 4" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://petparadise.com/images/product5.jpg" alt="Descrição da Imagem 5" />
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossos Produtos</h2>
+            <div class="row" id="productList">
+                <!-- Product cards will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Sobre o PetParadise</h2>
+            <p class="text-center">O PetParadise é a loja de pet mais completa do mundo, oferecendo uma ampla gama de produtos inovadores e serviços personalizados para todos os tipos de animais de estimação. Nossa missão é proporcionar o melhor para seu companheiro, com produtos de alta qualidade, preços competitivos e atendimento excepcional.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Entre em Contato</h2>
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="5" placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Avaliações dos Clientes</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Maria S.</h5>
+                            <p class="card-text">"Excelente loja! Produtos de alta qualidade e entrega rápida."</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">João P.</h5>
+                            <p class="card-text">"Ótimo atendimento e variedade de produtos. Recomendo!"</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ana R.</h5>
+                            <p class="card-text">"Encontrei tudo o que precisava para meu pet. Voltarei sempre!"</p>
+                            <div class="text-warning">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pet-care-tips" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Dicas de Cuidados com Pets</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://petparadise.com/images/tip1.jpg" class="card-img-top" alt="Alimentação Saudável">
+                        <div class="card-body">
+                            <h5 class="card-title">Alimentação Saudável</h5>
+                            <p class="card-text">Descubra as melhores práticas para uma dieta equilibrada para seu pet.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://petparadise.com/images/tip2.jpg" class="card-img-top" alt="Exercícios Diários">
+                        <div class="card-body">
+                            <h5 class="card-title">Exercícios Diários</h5>
+                            <p class="card-text">Aprenda como manter seu pet ativo e saudável com exercícios regulares.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="https://petparadise.com/images/tip3.jpg" class="card-img-top" alt="Cuidados com a Pelagem">
+                        <div class="card-body">
+                            <h5 class="card-title">Cuidados com a Pelagem</h5>
+                            <p class="card-text">Dicas para manter a pelagem do seu pet brilhante e saudável.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>PetParadise</h5>
+                    <p>A loja de pet mais completa do mundo</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Links Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#home" class="text-white">Início</a></li>
+                        <li><a href="#products" class="text-white">Produtos</a></li>
+                        <li><a href="#about" class="text-white">Sobre</a></li>
+                        <li><a href="#contact" class="text-white">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Siga-nos</h5>
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Modal -->
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Seu Carrinho</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="cartItems">
+                        <!-- Cart items will be dynamically inserted here -->
+                    </div>
+                    <div class="text-end mt-3">
+                        <h5>Total: R$ <span id="cartTotal">0.00</span></h5>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Continuar Comprando</button>
+                    <button type="button" class="btn btn-primary" id="checkoutBtn">Finalizar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Detalhes do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="productModalBody">
+                    <!-- Product details will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" id="addToCartModal">Adicionar ao Carrinho</button>
+                    <button type="button" class="btn btn-success" id="buyNowModal">Comprar Agora</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Finalizar Compra</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Selecione o método de pagamento:</h6>
+                    <div class="payment-options">
+                        <div class="payment-option" data-payment="pix">
+                            <i class="fas fa-qrcode"></i> PIX
+                        </div>
+                        <div class="payment-option" data-payment="credit">
+                            <i class="fas fa-credit-card"></i> Cartão de Crédito
+                        </div>
+                        <div class="payment-option" data-payment="boleto">
+                            <i class="fas fa-barcode"></i> Boleto Bancário
+                        </div>
+                    </div>
+                    <div id="paymentDetails" class="mt-3" style="display: none;">
+                        <!-- Payment details will be dynamically inserted here -->
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="confirmPaymentBtn">Confirmar Pagamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const products = [
+            { id: 1, name: "Cama para Gato Premium Impermeavel", price: 149.90, images: [
+                "2.png",
+                "10.png",
+            ]},
+            { id: 2, name: "Almofada", price: 69.90, images: [
+                "Img.png",
+                
+                
+            ]},
+            { id: 3, name: "Caixa de Areia para gato", price: 72.90, images: [
+                "areia.jpeg",
+                
+            ]},
+            { id: 4, name: "Arranhador Para Gatos Poste com Brinquedo Gato Duplo Exclusivo", price: 45.90, images: [
+                "br.jpeg",
+                
+                
+            ]},
+            { id: 5, name: "Fonte de Água para Gatos", price: 79.90, images: [
+                "br2.jpeg",
+                "https://petparadise.com/images/product5-2.jpg",
+                "https://petparadise.com/images/product5-3.jpg"
+            ]},
+            { id: 6, name: "Coleira GPS para Pets", price: 299.90, images: [
+                "https://petparadise.com/images/product6.jpg",
+                "https://petparadise.com/images/product6-2.jpg",
+                "https://petparadise.com/images/product6-3.jpg"
+            ]}
+        ];
+
+        let cart = [];
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const swiper = new Swiper('.swiper', {
+                loop: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                autoplay: {
+                    delay: 3000,
+                },
+            });
+
+            const productList = document.getElementById('productList');
+            products.forEach(product => {
+                const productCard = `
+                    <div class="col-md-4 mb-4">
+                        <div class="card product-card" data-id="${product.id}">
+                            <div id="productCarousel${product.id}" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    ${product.images.map((img, index) => `
+                                        <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                            <img src="${img}" class="d-block w-100 product-image" alt="${product.name}">
+                                        </div>
+                                    `).join('')}
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel${product.id}" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel${product.id}" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title product-title">${product.name}</h5>
+                                <p class="card-text product-price">R$ ${product.price.toFixed(2)}</p>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-primary btn-sm add-to-cart" data-id="${product.id}">Adicionar ao Carrinho</button>
+                                    <button class="btn btn-success btn-sm buy-now" data-id="${product.id}">Comprar Agora</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productList.innerHTML += productCard;
+            });
+
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', addToCart);
+            });
+
+            document.querySelectorAll('.buy-now').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const productId = parseInt(e.target.getAttribute('data-id'));
+                    buyNow(productId);
+                });
+            });
+
+            document.querySelectorAll('.product-card').forEach(card => {
+                card.addEventListener('click', showProductDetails);
+            });
+
+            document.getElementById('checkoutBtn').addEventListener('click', showCheckoutModal);
+
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.addEventListener('click', selectPaymentMethod);
+            });
+
+            document.getElementById('confirmPaymentBtn').addEventListener('click', confirmPayment);
+
+            document.getElementById('contactForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Obrigado por entrar em contato! Responderemos em breve.');
+                this.reset();
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+
+        function addToCart(e) {
+            e.stopPropagation();
+            const productId = parseInt(e.target.getAttribute('data-id'));
+            const product = products.find(p => p.id === productId);
+            
+            const existingItem = cart.find(item => item.id === productId);
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({ ...product, quantity: 1 });
+            }
+            
+            updateCartDisplay();
+        }
+
+        function buyNow(productId) {
+            const product = products.find(p => p.id === productId);
+            cart = [{ ...product, quantity: 1 }];
+            updateCartDisplay();
+            showCheckoutModal();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cartItems');
+            const cartTotal = document.getElementById('cartTotal');
+            const cartCount = document.querySelector('.cart-count');
+            
+            cartItems.innerHTML = '';
+            let total = 0;
+            let count = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                count += item.quantity;
+                
+                cartItems.innerHTML += `
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <div>
+                            <h6 class="mb-0">${item.name}</h6>
+                            <small>Quantidade: ${item.quantity}</small>
+                        </div>
+                        <div>
+                            R$ ${itemTotal.toFixed(2)}
+                            <button class="btn btn-sm btn-danger ms-2 remove-from-cart" data-id="${item.id}">Remover</button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            cartTotal.textContent = total.toFixed(2);
+            cartCount.textContent = count;
+            
+            document.querySelectorAll('.remove-from-cart').forEach(button => {
+                button.addEventListener('click', removeFromCart);
+            });
+        }
+
+        function removeFromCart(e) {
+            const productId = parseInt(e.target.getAttribute('data-id'));
+            cart = cart.filter(item => item.id !== productId);
+            updateCartDisplay();
+        }
+
+        function showProductDetails(e) {
+            if (!e.target.classList.contains('add-to-cart') && !e.target.classList.contains('buy-now')) {
+                const productId = parseInt(this.getAttribute('data-id'));
+                const product = products.find(p => p.id === productId);
+                
+                const modalBody = document.getElementById('productModalBody');
+                modalBody.innerHTML = `
+                    <div id="productModalCarousel${product.id}" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            ${product.images.map((img, index) => `
+                                <div class="carousel-item ${index === 0 ? 'active' : ''}">
+                                    <img src="${img}" class="d-block w-100" alt="${product.name}">
+                                </div>
+                            `).join('')}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#productModalCarousel${product.id}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#productModalCarousel${product.id}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <h3 class="mt-3">${product.name}</h3>
+                    <p class="product-price">R$ ${product.price.toFixed(2)}</p>
+                    <p>Descrição detalhada do produto...</p>
+                `;
+                
+                const addToCartModalBtn = document.getElementById('addToCartModal');
+                const buyNowModalBtn = document.getElementById('buyNowModal');
+                
+                addToCartModalBtn.setAttribute('data-id', product.id);
+                buyNowModalBtn.setAttribute('data-id', product.id);
+                
+                addToCartModalBtn.onclick = function(e) {
+                    addToCart(e);
+                    const productModal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+                    productModal.hide();
+                };
+
+                buyNowModalBtn.onclick = function(e) {
+                    const productId = parseInt(e.target.getAttribute('data-id'));
+                    buyNow(productId);
+                    const productModal = bootstrap.Modal.getInstance(document.getElementById('productModal'));
+                    productModal.hide();
+                };
+                
+                const productModal = new bootstrap.Modal(document.getElementById('productModal'));
+                productModal.show();
+            }
+        }
+
+        function showCheckoutModal() {
+            const cartModal = bootstrap.Modal.getInstance(document.getElementById('cartModal'));
+            cartModal.hide();
+            const checkoutModal = new bootstrap.Modal(document.getElementById('checkoutModal'));
+            checkoutModal.show();
+        }
+
+        function selectPaymentMethod(e) {
+            document.querySelectorAll('.payment-option').forEach(option => {
+                option.classList.remove('selected');
+            });
+            e.target.classList.add('selected');
+            
+            const paymentMethod = e.target.getAttribute('data-payment');
+            const paymentDetails = document.getElementById('paymentDetails');
+            paymentDetails.style.display = 'block';
+            
+            switch(paymentMethod) {
+                case 'pix':
+                    paymentDetails.innerHTML = '<p>Escaneie o QR Code para pagar com PIX:</p><img src="https://petparadise.com/images/pix-qrcode.png" alt="PIX QR Code" style="width: 200px;">';
+                    break;
+                case 'credit':
+                    paymentDetails.innerHTML = `
+                        <form id="creditCardForm">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Número do Cartão" required>
+                            </div>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Nome no Cartão" required>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="MM/AA" required>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="CVV" required>
+                                </div>
+                            </div>
+                        </form>
+                    `;
+                    break;
+                case 'boleto':
+                    paymentDetails.innerHTML = '<p>Gerar Boleto Bancário:</p><button class="btn btn-secondary" id="generateBoletoBtn">Gerar Boleto</button>';
+                    document.getElementById('generateBoletoBtn').addEventListener('click', () => {
+                        alert('Boleto gerado! Verifique seu e-mail.');
+                    });
+                    break;
+            }
+        }
+
+        function confirmPayment() {
+            alert('Pagamento confirmado! Obrigado por sua compra.');
+            cart = [];
+            updateCartDisplay();
+            const checkoutModal = bootstrap.Modal.getInstance(document.getElementById('checkoutModal'));
+            checkoutModal.hide();
+        }
+    </script>
+</body>
+</html>
